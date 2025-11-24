@@ -6,7 +6,7 @@ import os
 from projects.src.common.utils import logger as log
 
 
-# 処理
+# プロジェクトルートディレクトリ
 def project_root(path_object = True):
     current_file = Path(__file__).resolve()
     path = current_file.parents[3]
@@ -14,6 +14,7 @@ def project_root(path_object = True):
         return path
     return str(path)
 
+# .envファイル
 def project_env(path_object = True):
     path = f"{project_root()}\\conf\\.env"
     if not os.path.isfile(path):
@@ -23,6 +24,7 @@ def project_env(path_object = True):
         return Path(path)
     return path
 
+# ログディレクトリ
 def log_dir(path_object = True):
     path = f"{project_root()}\\call\\_log"
     if not os.path.isdir(path):
@@ -32,6 +34,7 @@ def log_dir(path_object = True):
         return Path(path)
     return path
 
+# ログアーカイブディレクトリ
 def log_archives_dir(path_object = True):
     path = f"{log_dir()}\\archives"
     if not os.path.isdir(path):
@@ -41,6 +44,7 @@ def log_archives_dir(path_object = True):
         return Path(path)
     return path
 
+# アプリケーションディレクトリ
 def application_dir(path_object = True):
     path = f"{project_root()}\\application"
     if not os.path.isdir(path):
@@ -50,8 +54,9 @@ def application_dir(path_object = True):
         return Path(path)
     return path
 
+# 認証ディレクトリ
 def spread_sheet_auth_dir(path_object = True):
-    path = f"{project_root()}\\src\\conf\\google\\spread_sheet\\auth"
+    path = f"{project_root()}\\conf\\auth"
     if not os.path.isdir(path):
         log.general(__file__,"ERROR",f"存在しないディレクトリです path={path}")
         return ""
