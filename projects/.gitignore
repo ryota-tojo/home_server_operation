@@ -1,0 +1,5 @@
+conf/.env
+conf/auth/home_database/auth.json
+call/_log/*.log
+call/_log/archives/*.zip
+src/common/ngrok/tmp/*.log
