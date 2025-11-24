@@ -1,7 +1,7 @@
-## Dockerコンテナ起動(home)_windows向け
+## Dockerコンテナ起動(home)_wsl向け
 
 ### 目的
-Windows環境で構築されたhomeアプリケーションで使用するDockerコンテナをすべて起動する。
+wsl環境で構築されたhomeアプリケーションで使用するDockerコンテナをすべて起動する。
 
 ### 処理概要
 * Windows環境で構築されたhomeアプリケーションで使用するDockerコンテナをすべて起動する。
